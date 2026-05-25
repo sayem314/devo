@@ -73,6 +73,27 @@ http://127.0.0.1:5173
 
 The first registered account becomes the admin account. After the first account exists, public registration is blocked. Admin users can add more users from the Users page.
 
+## Docker
+
+Run Devo with Docker:
+
+```sh
+docker run --rm \
+  -p 3000:3000 \
+  -v devo-data:/data \
+  -e AUTH_SECRET="$(openssl rand -base64 32)" \
+  -e SITE_URL="http://127.0.0.1:3000" \
+  sayem314/devo:latest
+```
+
+Open:
+
+```text
+http://127.0.0.1:3000
+```
+
+The image stores Devo data in `/data` by default. Mount a persistent volume there for users, tasks, provider settings, task files, installed packages, and run history.
+
 ## Environment
 
 App-level configuration lives in environment variables. For local development, copy `.env.example` to `.env`; Vite reads that file while running the dev server. For production, set the same variables in your process manager, container, or hosting environment.
