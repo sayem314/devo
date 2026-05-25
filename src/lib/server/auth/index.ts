@@ -7,7 +7,7 @@ import { hasRegisteredUsers } from "./users";
 
 export const auth = betterAuth({
   appName: "Devo",
-  baseURL: appEnv.SITE_URL,
+  baseURL: appEnv.ORIGIN,
   secret: appEnv.AUTH_SECRET,
   database: {
     db: await getDb(),

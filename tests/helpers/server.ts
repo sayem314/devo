@@ -12,7 +12,7 @@ process.env.DEVO_TASK_TIMEOUT_MS = "5000";
 process.env.DEVO_TASK_MAX_OUTPUT_BYTES = "1048576";
 process.env.DEVO_TASK_MAX_LOG_LINE_BYTES = "8192";
 process.env.AUTH_SECRET = "server-secret-should-not-reach-task";
-process.env.SITE_URL = "http://devo.test";
+process.env.ORIGIN = "http://devo.test";
 
 type ServerModules = {
   db: typeof import("../../src/lib/server/db/index");

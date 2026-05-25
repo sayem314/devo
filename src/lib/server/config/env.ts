@@ -72,7 +72,7 @@ function loadDotenv() {
 
 const envSchema = z.object({
   AUTH_SECRET: z.string().trim().min(16, "AUTH_SECRET must be at least 16 characters."),
-  SITE_URL: z.url("SITE_URL must be a valid URL.").trim(),
+  ORIGIN: z.url("ORIGIN must be a valid URL.").trim(),
   DEVO_DATA_DIR: z.string().trim().min(1).default(".devo"),
   DEVO_TASK_RUNTIME: z.enum(["auto", "bun", "node"]).default("auto"),
   DEVO_WORKERS: numericEnv(z.number().int().positive(), 2),
@@ -90,7 +90,7 @@ function buildTimeDefaults() {
 
   return {
     AUTH_SECRET: "devo-build-time-placeholder-secret",
-    SITE_URL: "http://127.0.0.1:5173"
+    ORIGIN: "http://127.0.0.1:5173"
   };
 }
 

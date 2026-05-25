@@ -56,7 +56,7 @@ Update `.env`:
 
 ```sh
 AUTH_SECRET=replace-with-your-generated-secret
-SITE_URL=http://127.0.0.1:5173
+ORIGIN=http://127.0.0.1:5173
 ```
 
 Run the dev server:
@@ -82,7 +82,7 @@ docker run --rm \
   -p 3000:3000 \
   -v devo-data:/data \
   -e AUTH_SECRET="$(openssl rand -base64 32)" \
-  -e SITE_URL="http://127.0.0.1:3000" \
+  -e ORIGIN="http://127.0.0.1:3000" \
   sayem314/devo:latest
 ```
 
@@ -101,7 +101,7 @@ App-level configuration lives in environment variables. For local development, c
 | Variable                       | Default   | Required | Description                                                   |
 | ------------------------------ | --------- | -------- | ------------------------------------------------------------- |
 | `AUTH_SECRET`                  | none      | Yes      | Secret used by auth. Must be at least 16 characters.          |
-| `SITE_URL`                     | none      | Yes      | Public base URL for auth cookies and redirects.               |
+| `ORIGIN`                       | none      | Yes      | Public app origin for auth and SvelteKit form checks.         |
 | `DEVO_DATA_DIR`                | `.devo`   | No       | Local DB, task files, run files, and installed task packages. |
 | `DEVO_TASK_RUNTIME`            | `auto`    | No       | Task runtime: `auto`, `bun`, or `node`.                       |
 | `DEVO_WORKERS`                 | `2`       | No       | Number of task workers.                                       |
@@ -221,7 +221,7 @@ DATABASE_URL=postgres://user:password@localhost:5432/app
 SHOPIFY_TOKEN=shpat_xxx
 ```
 
-Blank lines and lines starting with `#` are ignored. App-level secrets such as `AUTH_SECRET` and `SITE_URL` are not passed into task processes.
+Blank lines and lines starting with `#` are ignored. App-level secrets such as `AUTH_SECRET` and `ORIGIN` are not passed into task processes.
 
 ## Data
 
@@ -279,7 +279,7 @@ For a basic self-hosted deployment:
 1. Install dependencies with `bun install`.
 2. Build the app with `bun run build`.
 3. Set `AUTH_SECRET` to a strong random value.
-4. Set `SITE_URL` to the exact public URL, for example `https://devo.example.com`.
+4. Set `ORIGIN` to the exact public URL, for example `https://devo.example.com`.
 5. Set `DEVO_DATA_DIR` to a persistent directory or mounted volume.
 6. Set `DEVO_TASK_RUNTIME` if you want to force `bun` or `node`; otherwise leave it as `auto`.
 7. Run the built SvelteKit app with the Node adapter output.

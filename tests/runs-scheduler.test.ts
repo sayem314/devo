@@ -42,7 +42,7 @@ describe("run lifecycle", () => {
     trigger: ctx.trigger,
     taskSecret: process.env.TASK_SECRET,
     leakedAuthSecret: process.env.AUTH_SECRET ?? null,
-    leakedSiteUrl: process.env.SITE_URL ?? null,
+    leakedOrigin: process.env.ORIGIN ?? null,
     leakedDataDir: process.env.DEVO_DATA_DIR ?? null,
     taskDirPresent: Boolean(process.env.DEVO_TASK_DIR)
   };
@@ -60,7 +60,7 @@ describe("run lifecycle", () => {
       trigger: "manual",
       taskSecret: "task-secret",
       leakedAuthSecret: null,
-      leakedSiteUrl: null,
+      leakedOrigin: null,
       leakedDataDir: null,
       taskDirPresent: true
     });
