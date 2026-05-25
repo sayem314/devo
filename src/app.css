@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap");
+
+:root,
+:root.dark {
+  --background: #1a1a1a;
+  --foreground: #e8e8e8;
+  --card: #212121;
+  --card-foreground: #e8e8e8;
+  --popover: #2d2d2d;
+  --popover-foreground: #e8e8e8;
+  --primary: #4caf50;
+  --primary-foreground: #ffffff;
+  --secondary: #2d2d2d;
+  --secondary-foreground: #e8e8e8;
+  --muted: #2d2d2d;
+  --muted-foreground: #9e9e9e;
+  --accent: #383838;
+  --accent-foreground: #e8e8e8;
+  --destructive: #f44336;
+  --destructive-foreground: #ffffff;
+  --border: #404040;
+  --input: #2d2d2d;
+  --ring: #4caf50;
+  --radius: 0.375rem;
+  --sidebar: #151515;
+  --sidebar-foreground: #e8e8e8;
+  --sidebar-primary: #4caf50;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2d2d2d;
+  --sidebar-accent-foreground: #e8e8e8;
+  --sidebar-border: #404040;
+  --sidebar-ring: #4caf50;
+  --success: #4caf50;
+  --success-foreground: #ffffff;
+  --warning: #ffc107;
+  --warning-foreground: #1a1a1a;
+  --placeholder: #9e9e9e;
+  --chart-blue: #2196f3;
+  --chart-teal: #00bcd4;
+  --chart-amber: #ffc107;
+  --panel: var(--secondary);
+  --panel-strong: var(--accent);
+  --border-soft: color-mix(in srgb, var(--border) 60%, transparent);
+  --blue: var(--chart-blue);
+  --amber: var(--chart-amber);
+  --red: var(--destructive);
+  --teal: var(--chart-teal);
+  --code-bg: #151515;
+}
+
+:root.light {
+  --background: oklch(0.975 0.004 250);
+  --foreground: oklch(0.27 0.012 260);
+  --card: oklch(0.988 0.003 250);
+  --card-foreground: oklch(0.27 0.012 260);
+  --popover: oklch(0.988 0.003 250);
+  --popover-foreground: oklch(0.27 0.012 260);
+  --primary: oklch(0.55 0.16 145);
+  --primary-foreground: oklch(0.985 0.002 250);
+  --secondary: oklch(0.94 0.005 250);
+  --secondary-foreground: oklch(0.32 0.012 260);
+  --muted: oklch(0.94 0.005 250);
+  --muted-foreground: oklch(0.47 0.01 260);
+  --accent: oklch(0.93 0.007 250);
+  --accent-foreground: oklch(0.32 0.012 260);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0.002 250);
+  --border: oklch(0.875 0.006 250);
+  --input: oklch(0.925 0.005 250);
+  --ring: oklch(0.55 0.16 145);
+  --sidebar: oklch(0.955 0.005 250);
+  --sidebar-foreground: oklch(0.27 0.012 260);
+  --sidebar-primary: oklch(0.55 0.16 145);
+  --sidebar-primary-foreground: oklch(0.985 0.002 250);
+  --sidebar-accent: oklch(0.92 0.007 250);
+  --sidebar-accent-foreground: oklch(0.32 0.012 260);
+  --sidebar-border: oklch(0.86 0.006 250);
+  --sidebar-ring: oklch(0.55 0.16 145);
+  --warning: oklch(0.52 0.135 72);
+  --warning-foreground: oklch(0.985 0.002 250);
+  --placeholder: oklch(0.47 0.01 260);
+  --panel: var(--secondary);
+  --panel-strong: var(--accent);
+  --border-soft: color-mix(in srgb, var(--border) 60%, transparent);
+  --blue: oklch(0.58 0.18 255);
+  --amber: var(--warning);
+  --red: var(--destructive);
+  --teal: oklch(0.58 0.13 185);
+  --code-bg: var(--input);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family:
+    "Geist",
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder);
+  opacity: 0.9;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  border-radius: 7px;
+  font-weight: 650;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.primary-button {
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 7px 14px;
+}
+
+.secondary-button {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--foreground);
+  padding: 7px 12px;
+}
+
+.primary-button:hover {
+  background: color-mix(in srgb, var(--primary) 88%, white);
+}
+
+.secondary-button:hover {
+  background: var(--panel-strong);
+}
+
+.pill,
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.pill {
+  padding: 3px 7px;
+}
+
+.status-badge {
+  min-height: 22px;
+  padding: 3px 8px;
+}
+
+.pill.green,
+.status-badge.success,
+.status-badge.deployed,
+.status-badge.active {
+  background: color-mix(in srgb, var(--primary) 14%, transparent);
+  color: #67d46b;
+}
+
+.pill.blue,
+.status-badge.webhook,
+.status-badge.manual {
+  background: color-mix(in srgb, var(--blue) 14%, transparent);
+  color: #79aefe;
+}
+
+.pill.amber,
+.status-badge.draft,
+.status-badge.running,
+.status-badge.cron,
+.status-badge.warning {
+  background: color-mix(in srgb, var(--amber) 16%, transparent);
+  color: #f7bd4a;
+}
+
+.pill.teal,
+.status-badge.scoped,
+.status-badge.canceled {
+  background: color-mix(in srgb, var(--teal) 14%, transparent);
+  color: #51d3c5;
+}
+
+.status-badge.failed,
+.status-badge.revoked {
+  background: color-mix(in srgb, var(--red) 16%, transparent);
+  color: #fb7a7a;
+}
+
+.mono {
+  font-family: "Geist Mono", "SFMono-Regular", Consolas, ui-monospace, monospace;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

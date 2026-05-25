@@ -1,0 +1,9 @@
+.devo
+.svelte-kit
+build
+node_modules
+bun.lock
+
+.DS_Store
+.env
+.playwright-cli

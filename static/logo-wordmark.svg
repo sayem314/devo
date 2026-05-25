@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 64" role="img" aria-labelledby="title">
+  <title id="title">Devo</title>
+  <path fill="#e8e8e8" d="M6 16h18c14 0 23 9 23 24S38 64 24 64H6V16Zm12 10v28h5c7 0 12-5 12-14s-5-14-12-14h-5Zm38-10h32v10H68v9h17v10H68v9h22v10H56V16Zm40 0h12l9 34 9-34h12l-14 48h-14L96 16Zm48 24c0-15 10-25 25-25s25 10 25 25-10 25-25 25-25-10-25-25Zm12 0c0 9 5 15 13 15s13-6 13-15-5-15-13-15-13 6-13 15Z" transform="scale(.62) translate(0 -6)"/>
+  <circle cx="123" cy="38" r="5" fill="#4caf50"/>
+</svg>

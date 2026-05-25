@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">Devo</title>
+  <rect width="96" height="96" rx="22" fill="#1a1a1a"/>
+  <path fill="#e8e8e8" d="M16 33h12c8 0 14 6 14 15s-6 15-14 15H16V33Zm8 7v16h3c4 0 7-3 7-8s-3-8-7-8h-3Zm22-7h20v7H54v5h10v7H54v4h13v7H46V33Zm24 0h8l5 19 5-19h8L87 63h-8L70 33Zm29 15c0-9 6-15 15-15s15 6 15 15-6 15-15 15-15-6-15-15Zm8 0c0 5 3 8 7 8s7-3 7-8-3-8-7-8-7 3-7 8Z" transform="scale(.62) translate(5 28)"/>
+  <circle cx="80" cy="58" r="5" fill="#4caf50"/>
+</svg>
