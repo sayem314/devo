@@ -1,6 +1,8 @@
 # Devo
 
-Devo is a self-hosted automation builder where the main interface is an AI chat plus a TypeScript editor. Instead of wiring node-based workflows, you describe a task, review the generated TypeScript files, edit them directly, and deploy them behind a trigger.
+Devo is a self-hosted, code-first automation builder. Think n8n or Activepieces, but without a workflow canvas: every automation is JavaScript/TypeScript code that you can generate with an AI agent, edit in the browser, and deploy behind a trigger.
+
+It is built for complex automations where node graphs become hard to reason about. Instead of wiring boxes together, you describe what you want, review the generated `main.ts`, adjust `.env` and `package.json`, and run the task as normal code. Because each task has its own `package.json`, tasks can import npm packages like a regular JavaScript/TypeScript project.
 
 Tasks can run from:
 
