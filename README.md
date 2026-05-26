@@ -10,6 +10,8 @@ Tasks can run from:
 
 Each task owns its own `main.ts`, `.env`, and `package.json` files. Task settings live in the local database and are edited with normal UI controls. Devo stores app data locally and runs task code as child processes.
 
+![Devo demo](static/devo-demo.gif)
+
 ## Status
 
 Devo is early MVP software for local and self-hosted use by trusted users.
