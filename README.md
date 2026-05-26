@@ -20,22 +20,6 @@ Devo is early MVP software for local and self-hosted use by trusted users.
 
 Do not treat the current runtime as a secure multi-tenant sandbox. Task code runs in a separate process with timeouts and output limits, but it still runs on the host with the permissions available to that process.
 
-## Stack
-
-- SvelteKit and Svelte 5
-- Better Auth for local email/password auth
-- Kysely with libSQL/SQLite
-- Bun or Node for task execution
-- Monaco editor
-- OpenAI Agents SDK for OpenAI-compatible task generation
-
-## Requirements
-
-- Bun for local development commands
-- Node-compatible runtime for the SvelteKit app and optional Node task execution
-
-By default, task execution follows the runtime that starts Devo: Bun when Devo runs under Bun, Node when Devo runs under Node. Set `DEVO_TASK_RUNTIME=bun` or `DEVO_TASK_RUNTIME=node` to force one.
-
 ## Quick Start
 
 Install dependencies:
