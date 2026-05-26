@@ -222,38 +222,6 @@ DEVO_DATA_DIR=/var/lib/devo
 
 Back up this directory if you care about tasks, users, AI provider settings, and run history.
 
-## Development
-
-Run checks:
-
-```sh
-bun run check
-```
-
-Run tests:
-
-```sh
-bun test
-```
-
-Check formatting:
-
-```sh
-bun run format:check
-```
-
-Format files:
-
-```sh
-bun run format
-```
-
-Build:
-
-```sh
-bun run build
-```
-
 ## Deployment Notes
 
 For a basic self-hosted deployment:
