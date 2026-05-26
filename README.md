@@ -22,6 +22,29 @@ Do not treat the current runtime as a secure multi-tenant sandbox. Task code run
 
 ## Quick Start
 
+Run Devo with Docker:
+
+```sh
+docker run --rm \
+  -p 3000:3000 \
+  -v devo-data:/data \
+  -e AUTH_SECRET="$(openssl rand -base64 32)" \
+  -e ORIGIN="http://127.0.0.1:3000" \
+  sayem314/devo:latest
+```
+
+Open:
+
+```text
+http://127.0.0.1:3000
+```
+
+The image stores Devo data in `/data` by default. Mount a persistent volume there for users, tasks, provider settings, task files, installed packages, and run history.
+
+The first registered account becomes the admin account. After the first account exists, public registration is blocked. Admin users can add more users from the Users page.
+
+## Development
+
 Install dependencies:
 
 ```sh
@@ -32,12 +55,6 @@ Create a local env file:
 
 ```sh
 cp .env.example .env
-```
-
-Set a real auth secret:
-
-```sh
-openssl rand -base64 32
 ```
 
 Update `.env`:
@@ -58,29 +75,6 @@ Open:
 ```text
 http://127.0.0.1:5173
 ```
-
-The first registered account becomes the admin account. After the first account exists, public registration is blocked. Admin users can add more users from the Users page.
-
-## Docker
-
-Run Devo with Docker:
-
-```sh
-docker run --rm \
-  -p 3000:3000 \
-  -v devo-data:/data \
-  -e AUTH_SECRET="$(openssl rand -base64 32)" \
-  -e ORIGIN="http://127.0.0.1:3000" \
-  sayem314/devo:latest
-```
-
-Open:
-
-```text
-http://127.0.0.1:3000
-```
-
-The image stores Devo data in `/data` by default. Mount a persistent volume there for users, tasks, provider settings, task files, installed packages, and run history.
 
 ## Environment
 
